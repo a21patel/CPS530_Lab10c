@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Stylish Web Page</title>
+    <title>Lab10 - Problem3</title>
     <!-- Materialize CSS CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
             padding: 20px;
         }
 
@@ -22,32 +23,56 @@
             overflow-y: auto;
         }
 
+        /* Common style for all card titles */
         .card-title {
+            font-size: 1.6rem;
+            font-weight: 500;
             color: #1e88e5;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .card-panel {
-            background-color: #fff;
-            border-radius: 10px;
-        }
-
+        /* Styling for all cards */
         .card {
             margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
         }
 
-        .z-depth-3 {
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Make sure the content fits within the cards */
         .card-content p {
+            font-size: 1.1rem;
             color: #555;
-            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
 
         .card-content ul {
+            font-size: 1.1rem;
             color: #4CAF50;
-            font-size: 16px;
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+
+        .card-content ul li {
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .sub-content {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .z-depth-3 {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         /* Center-align content on mobile */
@@ -60,16 +85,19 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="center-align blue-text">Welcome to My Stylish Web Page</h1>
+        <h1 class="center-align blue-text">Lab10 - Problem 3</h1>
         <div class="row">
 
             <!-- Card 1: Installation and Building Process -->
             <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <span class="card-title blue-text text-darken-3">Explanation of Installation and Building Process</span>
-                        <p><strong>Installation:</strong> I didn't have to download any files since I used the CDN for Materialize CSS and JavaScript. I linked the Materialize CSS in the <code>&lt;head&gt;</code> section and the Materialize JavaScript files at the end of the <code>&lt;body&gt;</code>.</p>
-                        <p><strong>Building the Page:</strong> To build the page, I utilized Materialize’s grid system to structure the layout. I used cards and buttons, which are part of the Materialize component library. For example, I added cards with content to explain how I installed the framework and the difficulties I encountered.</p>
+                        <span class="card-title">Explanation of Installation and Building Process</span>
+                        <p class="section-title">Installation:</p>
+                        <p class="sub-content">I didn't have to download any files since I used the CDN for Materialize CSS and JavaScript. I linked the Materialize CSS in the <code>&lt;head&gt;</code> section and the Materialize JavaScript files at the end of the <code>&lt;body&gt;</code>.</p>
+
+                        <p class="section-title">Building the Page:</p>
+                        <p class="sub-content">To build the page, I utilized Materialize’s grid system to structure the layout. I used cards and buttons, which are part of the Materialize component library. For example, I added cards with content to explain how I installed the framework and the difficulties I encountered.</p>
                     </div>
                 </div>
             </div>
@@ -78,13 +106,21 @@
             <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <span class="card-title red-text text-darken-3">Challenges and Solutions</span>
-                        <ul>
-                            <li><strong>Responsiveness:</strong> Initially, the layout wasn’t displaying correctly on smaller screens. I fixed this by ensuring I used the grid system properly and the <code>col</code> classes.</li>
-                            <li><strong>Images Not Responsive:</strong> The images I used weren’t resizing automatically. I fixed this by adding the <code>responsive-img</code> class to the <code>&lt;img&gt;</code> tags, which made the images resize according to the screen size.</li>
-                            <li><strong>Centering Content:</strong> The content wasn’t centered properly on mobile devices. To solve this, I added Materialize’s <code>center-align</code> class to the elements that needed to be centered.</li>
-                            <li><strong>Hosting on GitHub Pages:</strong> The page was hosted on GitHub Pages, which allowed me to quickly deploy the site without needing a separate web hosting provider. It also provided me with HTTPS support for secure access to the site.</li>
-                        </ul>
+                        <span class="card-title red-text">Challenges and Solutions</span>
+                        <p class="section-title">Responsiveness:</p>
+                        <p class="sub-content">Initially, the layout wasn’t displaying correctly on smaller screens. I fixed this by ensuring I used the grid system properly and the <code>col</code> classes.</p>
+
+                        <p class="section-title">Images Not Responsive:</p>
+                        <p class="sub-content">The images I used weren’t resizing automatically. I fixed this by adding the <code>responsive-img</code> class to the <code>&lt;img&gt;</code> tags, which made the images resize according to the screen size.</p>
+
+                        <p class="section-title">Centering Content:</p>
+                        <p class="sub-content">The content wasn’t centered properly on mobile devices. To solve this, I added Materialize’s <code>center-align</code> class to the elements that needed to be centered.</p>
+
+                        <p class="section-title">Hosting on GitHub Pages:</p>
+                        <p class="sub-content">The page was hosted on GitHub Pages, which allowed me to quickly deploy the site without needing a separate web hosting provider. It also provided me with HTTPS support for secure access to the site.</p>
+
+                        <p class="section-title">GitHub Pages Update Delay:</p>
+                        <p class="sub-content">Initially, I faced an issue where changes made to the repository weren’t reflected immediately on the live site. After pushing updates, the changes would sometimes take a while to appear. This was resolved by waiting a bit longer and occasionally refreshing the GitHub Pages section in the repository settings to force the update.</p>
                     </div>
                 </div>
             </div>
@@ -93,8 +129,8 @@
             <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <span class="card-title green-text text-darken-3">Host the Site on GitHub Pages</span>
-                        <p><strong>Steps to Host:</strong></p>
+                        <span class="card-title green-text">Host the Site on GitHub Pages</span>
+                        <p class="section-title">Steps to Host:</p>
                         <ul>
                             <li>After creating your HTML page, push it to a GitHub repository.</li>
                             <li>Go to the repository settings, scroll down to the GitHub Pages section, and select the branch you want to use (usually <code>main</code> or <code>master</code>).</li>
