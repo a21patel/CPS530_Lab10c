@@ -9,6 +9,7 @@
     <style>
         body {
             background-color: #f4f4f4;
+            padding: 20px;
         }
 
         .container {
@@ -17,6 +18,8 @@
 
         .card-content {
             padding: 20px;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
         .card-title {
@@ -36,6 +39,17 @@
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         }
 
+        /* Make sure the content fits within the cards */
+        .card-content p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .card-content ul {
+            color: #4CAF50;
+            font-size: 16px;
+        }
+
         /* Center-align content on mobile */
         @media screen and (max-width: 600px) {
             .center-align {
@@ -46,14 +60,14 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="center-align">Welcome to My Stylish Web Page</h1>
+        <h1 class="center-align blue-text">Welcome to My Stylish Web Page</h1>
         <div class="row">
 
             <!-- Card 1: Installation and Building Process -->
             <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <span class="card-title">Explanation of Installation and Building Process</span>
+                        <span class="card-title blue-text text-darken-3">Explanation of Installation and Building Process</span>
                         <p><strong>Installation:</strong> I didn't have to download any files since I used the CDN for Materialize CSS and JavaScript. I linked the Materialize CSS in the <code>&lt;head&gt;</code> section and the Materialize JavaScript files at the end of the <code>&lt;body&gt;</code>.</p>
                         <p><strong>Building the Page:</strong> To build the page, I utilized Materialize’s grid system to structure the layout. I used cards and buttons, which are part of the Materialize component library. For example, I added cards with content to explain how I installed the framework and the difficulties I encountered.</p>
                     </div>
@@ -64,7 +78,7 @@
             <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <span class="card-title">Challenges and Solutions</span>
+                        <span class="card-title red-text text-darken-3">Challenges and Solutions</span>
                         <ul>
                             <li><strong>Responsiveness:</strong> Initially, the layout wasn’t displaying correctly on smaller screens. I fixed this by ensuring I used the grid system properly and the <code>col</code> classes.</li>
                             <li><strong>Images Not Responsive:</strong> The images I used weren’t resizing automatically. I fixed this by adding the <code>responsive-img</code> class to the <code>&lt;img&gt;</code> tags, which made the images resize according to the screen size.</li>
@@ -79,7 +93,7 @@
             <div class="col s12 m6 l4">
                 <div class="card z-depth-3">
                     <div class="card-content">
-                        <span class="card-title">Host the Site on GitHub Pages</span>
+                        <span class="card-title green-text text-darken-3">Host the Site on GitHub Pages</span>
                         <p><strong>Steps to Host:</strong></p>
                         <ul>
                             <li>After creating your HTML page, push it to a GitHub repository.</li>
