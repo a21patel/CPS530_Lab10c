@@ -3,17 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Web Page</title>
+    <title>My Stylish Web Page</title>
     <!-- Materialize CSS CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            color: #1e88e5;
+        }
+
+        .card-panel {
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+        }
+
+        .z-depth-3 {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Center-align content on mobile */
+        @media screen and (max-width: 600px) {
+            .center-align {
+                text-align: center !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="center-align">Welcome to My Web Page</h1>
+        <h1 class="center-align">Welcome to My Stylish Web Page</h1>
         <div class="row">
+
             <!-- Card 1: Installation and Building Process -->
-            <div class="col s12 m6">
-                <div class="card">
+            <div class="col s12 m6 l4">
+                <div class="card z-depth-3">
                     <div class="card-content">
                         <span class="card-title">Explanation of Installation and Building Process</span>
                         <p><strong>Installation:</strong> I didn't have to download any files since I used the CDN for Materialize CSS and JavaScript. I linked the Materialize CSS in the <code>&lt;head&gt;</code> section and the Materialize JavaScript files at the end of the <code>&lt;body&gt;</code>.</p>
@@ -23,8 +61,8 @@
             </div>
 
             <!-- Card 2: Challenges and Solutions -->
-            <div class="col s12 m6">
-                <div class="card">
+            <div class="col s12 m6 l4">
+                <div class="card z-depth-3">
                     <div class="card-content">
                         <span class="card-title">Challenges and Solutions</span>
                         <ul>
@@ -38,8 +76,8 @@
             </div>
 
             <!-- Card 3: Hosting on GitHub Pages -->
-            <div class="col s12">
-                <div class="card">
+            <div class="col s12 m6 l4">
+                <div class="card z-depth-3">
                     <div class="card-content">
                         <span class="card-title">Host the Site on GitHub Pages</span>
                         <p><strong>Steps to Host:</strong></p>
@@ -51,6 +89,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 
